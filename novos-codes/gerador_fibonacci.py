@@ -1,0 +1,1 @@
+# Implemente um gerador que produza os primeiros n números da sequência de Fibonacci.
