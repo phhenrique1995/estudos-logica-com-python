@@ -16,17 +16,21 @@
 # Os valores devem ser mostrados na mesma linha, separados por um espaço em
 # branco. Não deve haver espaço após o último valor.
 
-n = int(input())
-fib1 = 0
-fib2 = 1
-n = n - 1
-fib_list = [fib1]
+# Solicita o valor de N com mensagem clara
+n = int(input("Digite um número inteiro entre 1 e 45: "))
 
-for i in range(0,n):
-  soma = fib1 + fib2
-  fib1 = fib2
-  fib2 = soma
-  fib_list.append(fib1)
+# Validação de entrada
+if n <= 0 or n >= 46:
+    print("Entrada inválida. O número deve estar entre 1 e 45.")
+else:
+    fib1 = 0
+    fib2 = 1
+    fib_list = [fib1]
 
-fib_string = (' '.join(str(x) for x in fib_list))
-print(fib_string)
+    for i in range(1, n):
+        fib_list.append(fib2)
+        fib1, fib2 = fib2, fib1 + fib2
+
+    # Geração da saída formatada
+    fib_string = ' '.join(str(x) for x in fib_list)
+    print(fib_string)
