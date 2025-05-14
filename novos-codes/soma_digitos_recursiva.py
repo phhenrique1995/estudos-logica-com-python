@@ -7,7 +7,7 @@ def soma_digitos(n):
     else:
         return n % 10 + soma_digitos(n // 10)
 
-# Entrada do usuário
+# Entrada de dados do usuário
 entrada = input("Digite um número inteiro positivo: ")
 
 # Validação
